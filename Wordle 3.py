@@ -1,4 +1,4 @@
-print("Welcome to the Mani Wordle Game")
+print("Welcome to Wordle Blitz\n *****************************************************************************************")
 print("You start the game by guessing a 5-letter word.")
 print("If you get the final word within 6 guesses, you win, otherwise, you lose.")
 
@@ -9,7 +9,18 @@ RED = "\033[31m"
 YELLOW = "\033[33m"
 RESET = "\033[0m"
 
-word_list = ["apple", "table", "house", "mouse", "chair", "train", "knife", "tiger", "lemon", "melon", "piano", "radio", "cloud", "beach", "happy", "light", "money", "earth", "dream", "music", "quiet", "smile", "robot", "pilot", "heart", "storm", "wrist", "voice", "juice"]
+word_list = [
+    "apple", "baker", "candy", "dance", "eager", "flame", "grape", "hatch", "image", "jolly",
+    "knack", "lunch", "march", "noble", "ocean", "piano", "queen", "ranch", "shiny", "torch",
+    "union", "vivid", "whale", "xenon", "yacht", "zebra", "abide", "brave", "charm", "dream",
+    "eagle", "faint", "glory", "heart", "ideal", "joint", "kiosk", "lemon", "mirth", "nerve",
+    "orbit", "pride", "quill", "reign", "skirt", "trend", "umbra", "vigor", "wrist", "xylus",
+    "yield", "zesty", "acute", "blink", "crisp", "drove", "evoke", "flint", "gloat", "harsh",
+    "itchy", "jazzy", "kneel", "lunar", "motel", "novel", "olive", "pixel", "quake", "rider",
+    "smart", "tulip", "usher", "vixen", "wound", "xerox", "youth", "zonal", "aloft", "boast",
+    "curve", "dizzy", "elbow", "frost", "glide", "hasty", "inbox", "jumpy", "kudos", "latch",
+    "meant", "nylon", "omega", "punch", "quart", "risky", "siren", "taunt", "ultra", "vivid"
+]
 word = random.choice(word_list)
 
 for i in range(6):
@@ -32,6 +43,11 @@ for i in range(6):
             else:
                 feedback += guess[j]
         print(feedback)
+
+else:
+    print(f"{RED}Game Over! The correct word was '{word}'.{RESET}")
+
+print("Thanks for playing!")
 
 else:
     print(f"{RED}Game Over! The correct word was '{word}'.{RESET}")
